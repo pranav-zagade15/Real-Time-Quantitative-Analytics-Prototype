@@ -1,0 +1,16 @@
+2-minute demo narration (exact script)
+
+00:00 - 00:10  — Opening
+"Hello, I’m Pranav Zagade. This is a compact real-time quantitative analytics prototype demonstrating ingestion, deterministic aggregation, core analytics, and a lightweight research UI."
+
+00:10 - 00:30 — Architecture overview
+"Data streams in from an exchange WebSocket (or synthetic generator for demos), is aggregated deterministically into OHLCV bars, and fed into a small analytics engine. The engine implements OLS hedge ratios, spread construction, rolling z-scores, ADF stationarity testing, and rolling correlations—each as small, testable functions."
+
+00:30 - 01:00 — Live demo actions
+"I’ll load a synthetic tick stream, show the aggregated 1‑second bars, compute the hedge ratio between two symbols, and display the spread and its rolling z-score. Alerts will highlight |z-score| > 2."
+
+01:00 - 01:30 — Validation and reproducibility
+"All analytics are unit tested and deterministic. The repository includes a synthetic tick generator so the demonstration is reproducible without exchange keys. Tests run with fixed seeds and CI verifies correctness on every PR."
+
+01:30 - 02:00 — Closing
+"The prototype prioritises correctness and clarity over engineering complexity. The design is intentionally easy to extend to Kafka/TimescaleDB/Backtester if needed. I’m happy to walk through the code or discuss any of the implementation details."

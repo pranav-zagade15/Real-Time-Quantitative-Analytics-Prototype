@@ -1,0 +1,16 @@
+/* Minimal styling to give a slightly more polished look */
+.reportview-container .main header {
+  background-color: #0b6efd;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.stApp {
+  font-family: Inter, Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* make tables look tighter */
+.css-1pahdxg table {
+  border-collapse: collapse;
+}

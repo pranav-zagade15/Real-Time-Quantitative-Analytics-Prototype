@@ -1,0 +1,27 @@
+nohup: ignoring input
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.0.1.234:8501
+  External URL: http://20.192.21.51:8501
+
+/workspaces/realtime-quant-/src/analytics.py:25: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  return float(model.params[1])
+/workspaces/realtime-quant-/src/analytics.py:25: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  return float(model.params[1])
+/workspaces/realtime-quant-/app.py:92: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  st.line_chart(pd.DataFrame({"spread": spread, "zscore": z}).fillna(method="ffill"))
+/workspaces/realtime-quant-/src/analytics.py:25: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  return float(model.params[1])
+/workspaces/realtime-quant-/app.py:92: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  st.line_chart(pd.DataFrame({"spread": spread, "zscore": z}).fillna(method="ffill"))
+/workspaces/realtime-quant-/src/analytics.py:25: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  return float(model.params[1])
+/workspaces/realtime-quant-/src/analytics.py:25: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  return float(model.params[1])
+/workspaces/realtime-quant-/app.py:92: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  st.line_chart(pd.DataFrame({"spread": spread, "zscore": z}).fillna(method="ffill"))

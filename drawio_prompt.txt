@@ -1,0 +1,16 @@
+Draw.io architecture diagram prompt (for a single-page to include in repo):
+
+Create a clean architecture diagram that highlights the following components and data flows for a compact real-time quantitative analytics prototype.
+
+Components (left to right):
+- Market Data Source: Binance Futures WebSocket (label: websocket ticks)
+- Ingestion Layer: ws_client.py (label: pluggable, reconnects, normalizes to schema)
+- In-Memory Time-Series Buffer: Pandas DataFrame (label: deterministic append)
+- Resampling Layer: storage.py (label: OHLCV: 1s,1m,5m)
+- Analytics Engine: analytics.py (functions: OLS hedge ratio, spread, rolling z-score, ADF, rolling corr)
+- Alerts & Export: alerts.py + CSV export (label: rule-based alerts)
+- Research UI: Streamlit app.py (label: interactive charts, ADF on-demand, CSV download)
+
+Show arrows for real-time flow (ticks → ingestion → resample → analytics → UI/alerts) and annotate where offline demo / synthetic generator plugs in (tools/gen_synthetic_ticks.py) and where testing & CI operate (tests/, .github/workflows/ci.yml).
+
+Use clear boxes, short labels, and colour to emphasise that the core analytics are stateless functions operating on Pandas Series.
