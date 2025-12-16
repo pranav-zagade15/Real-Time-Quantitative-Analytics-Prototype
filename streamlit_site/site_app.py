@@ -148,9 +148,17 @@ try:
     st.download_button("Download pair CSV", csv, file_name="pair_analysis.csv", mime="text/csv")
 
     if st.session_state.get("enable_png"):
-        # PNG snapshot of the spread chart
-        img_bytes = fig2.to_image(format="png", width=1200, height=600)
-        st.download_button("Download spread PNG", data=img_bytes, file_name="spread.png", mime="image/png")
+        # PNG snapshot of the spread chart — require Kaleido for fig.to_image
+        try:
+            import kaleido  # type: ignore
+            img_bytes = fig2.to_image(format="png", width=1200, height=600)
+            st.download_button("Download spread PNG", data=img_bytes, file_name="spread.png", mime="image/png")
+        except Exception as exc:  # pragma: no cover - runtime UI behavior
+            st.warning(
+                "PNG export requires the Kaleido package. Install with: `pip install kaleido`. "
+                "For now, you can download the CSV or take a screenshot."
+            )
+            st.caption(f"PNG error: {exc}")
 
 except Exception as exc:  # pragma: no cover - UI-run only
     st.error(f"Error computing pair analytics: {exc}")
